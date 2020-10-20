@@ -30,7 +30,7 @@ const changeRole = Authenticated(async (req, res) => {
         { _id },
         { role: newRole },
         { new: true }
-    )..select("-password")
+    ).select("-password")
     console.log('users=', users);
     res.status(200).json(users);
 })
