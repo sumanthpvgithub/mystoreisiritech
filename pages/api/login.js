@@ -23,6 +23,9 @@ export default async (req, res) => {
                 expiresIn: '7d'
             })
             const { name, role, email } = user;
+            console.log('api/login', user);
+            res.header("Access-Control-Allow-Origin", "*");
+            res.header("Access-Control-Allow-Headers", "X-Requested-With");
             return res.status(201).json({ token, user: { name, role, email } });
         } else {
             return res.status(401).json({ error: 'Invalid Credentials' })

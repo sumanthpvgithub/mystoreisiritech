@@ -26,6 +26,7 @@ const NavBar = () => {
                     }
                     {user ?
                         <>
+                            <li className={isActive('/products')}><Link href="/products"><a>Products</a></Link></li>
                             <li className={isActive('/cart')}><Link href="/cart"><a>Cart</a></Link></li>
                             <li className={isActive('/account')}><Link href="/account"><a>Account</a></Link></li>
                             <li><button className="btn red" onClick={(e) => {

@@ -1,5 +1,6 @@
 import NavBar from './NavBar';
 import Head from 'next/head';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
     return (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
             </Head>
             <NavBar />
             {children}
+            <Footer />
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         </>
     )
